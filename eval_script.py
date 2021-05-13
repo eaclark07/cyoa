@@ -27,7 +27,6 @@ def model_choice_analysis(data):
 	for i in range(len(choseModel)):
 		print("Line " + str(i + 1) + ":\t" + str(choseModel[i]) + "/" + str(totalWriters) + "\t" + str(
 			choseModel[i] / (totalWriters * 1.)))
-	# TODO: add significance results
 	return True
 
 
