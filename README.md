@@ -1,4 +1,4 @@
-# cyoa
+# "Choose Your Own Adventure" Evaluation
 This repo has resources for "Choose Your Own Adventure"-style evaluation, as described in the 2021 NAACL paper.
 
 ## Evaluation script
