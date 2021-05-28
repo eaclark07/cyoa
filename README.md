@@ -15,4 +15,4 @@ The script includes analyses from previous work, gathered in `story-eval-utils`.
 ## Website template
 
 ## Demo
-A demo of the website running nucleus vs. top-k sampling can be found [here](https://homes.cs.washington.edu/~eaclark7/multi-model-demo/).
+A demo of the website running a CYOA story writing task can be found [here](https://homes.cs.washington.edu/~eaclark7/multi-model-demo/).
