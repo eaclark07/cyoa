@@ -1,5 +1,5 @@
 # "Choose Your Own Adventure" Evaluation
-This repo has resources for "Choose Your Own Adventure"-style evaluation, as described in the 2021 NAACL paper.
+This repo has resources for "Choose Your Own Adventure"-style evaluation, as described in the [2021 NAACL paper](https://www.aclweb.org/anthology/2021.naacl-main.279/).
 
 ## Evaluation script
 The evaluation script takes in a results file and runs the analyses described in the CYOA paper, based on the writers' preferences, the writers' revisions, and the human- vs. machine-generated text.
