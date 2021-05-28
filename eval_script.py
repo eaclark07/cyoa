@@ -3,12 +3,14 @@ from nltk.metrics import edit_distance
 import pandas as pd
 import matplotlib.style
 from scipy import stats
-import user_metric as user
 import sys
-sys.path.append('story-generation-eval')
+sys.path.append('story-eval-utils')
+# packages from https://github.com/abisee/story-generation-eval
 import metrics
 from samples import Sample
 from spacy_annotate import get_spacy_encoded_text, init_spacy
+# package from https://github.com/dojoteef/storium-frontend
+import user_metric as user
 
 SPACY_MED = init_spacy()
 
@@ -27,6 +29,9 @@ def model_choice_analysis(data):
 	for i in range(len(choseModel)):
 		print("Line " + str(i + 1) + ":\t" + str(choseModel[i]) + "/" + str(totalWriters) + "\t" + str(
 			choseModel[i] / (totalWriters * 1.)))
+	# significance test
+	print("== SIGNIFICANCE ==")
+	print(stats.binom_test(sum(choseModel), 5*totalWriters))
 	return True
 
 
@@ -154,6 +159,13 @@ def likert_analysis(df):
 
 if __name__ == "__main__":
 	afile = sys.argv[1]
+	# input file should have cols with the following headings:
+	# 'modelLines1', 'modelLines2', 'modelLines3', 'modelLines4', 'modelLines5'
+	# 'baselineLines1', 'baselineLines2', 'baselineLines3', 'baselineLines4', 'baselineLines5'
+	# 'userLines1', 'userLines2', 'userLines3', 'userLines4', 'userLines5'
+	# 'userEdits1', 'userEdits2', 'userEdits3', 'userEdits4', 'userEdits5'
+	# 'isModelAccepted1', 'isModelAccepted2', 'isModelAccepted3', 'isModelAccepted4', 'isModelAccepted5'
+	# 'Q1', 'Q2', 'Q3', 'Q4', 'Q5' [Likert scale responses]
 	df = pd.read_table(afile, index_col=0)
 	model_choice_analysis(df)
 	writer_changes_analysis(df)
