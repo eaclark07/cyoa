@@ -6,7 +6,7 @@ The evaluation script takes in a results file and runs the analyses described in
 
 It compares two models, labeled Model and Baseline.
 
-The script includes analyses from previous work. You can reference those repos for more information:
+The script includes analyses from previous work, gathered in `story-eval-utils`. Please reference those repos for more information:
 
 - https://github.com/abisee/story-generation-eval (concreteness, distinct_n, sent len)
 - https://github.com/dojoteef/storium-frontend (USER)
