@@ -13,7 +13,7 @@ The script includes analyses from previous work, gathered in `story-eval-utils`.
 
 
 ## Website template
-`website_template` contains code for a basic website for running a CYOA writing task.
+`website_template` contains code for a basic website for running a CYOA writing task. You can include your own model generation code and code for recording and storing the task results. The places where these should go are flagged in the template.
 
 ## Demo
 A demo of the website running a CYOA story writing task can be found [here](https://homes.cs.washington.edu/~eaclark7/multi-model-demo/).
